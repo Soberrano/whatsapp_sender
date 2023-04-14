@@ -57,7 +57,7 @@ keyboard = Controller()
 
 dataframe = pd.read_excel('bd.xlsx')
 data = pd.DataFrame(dataframe, columns=['Num', 'Fio', 'Recomend','link','res'])
-for i in range(0, 97):
+for i in range(0, len(data.axes[0])):
     if data['Recomend'].iloc[i] != "":
         a = "Уважаемые родители, ваш ребенок " + str(data['Fio'].iloc[i]) +\
         " в течении 2022 - 2023 учебного года посещал занятия в Детском технопарке Кванториум."\
